@@ -1,0 +1,35 @@
+version: "2"
+services:
+  front_wm:
+    container_name: front_wm
+    build: ./front-app
+    ports:
+      - "80:80"
+    depends_on:
+      - back_mw
+      
+  back_mw:
+    container_name: back_mw
+    build: ./server-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+      
+  mongo:
+    container_name: my-mongo
+    image: mongo
+    ports:
+      - "27020:27017"
+    depends_on:
+      - mongoimport
+
+  mongoimport:
+    image: mongo
+    container_name: mongoImport
+    volumes:
+      - ./server-app/data/01-products.json:/src/data/products.json
+      - ./server-app/data/02-discounts.json:/src/data/discounts.json
+    command: bash -c "
+      mongoimport --host mongo --db my-mongo --collection products --drop --file /src/data/products.json &&
+      mongoimport --host mongo --db my-mongo --collection discounts --drop --file /src/data/discounts.json"

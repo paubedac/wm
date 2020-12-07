@@ -1,0 +1,117 @@
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: auto;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 10px;
+}
+
+.product-item {
+  border-radius: 10px;
+  max-width: 240px;
+  padding: 5px;
+  background-color: #fff;
+  margin-bottom: 34px;
+}
+
+.product-item-image-container {
+  text-align: center;
+}
+
+.product-item-image {
+  height: 220px;
+  width: 220px;
+}
+
+.product-item-description {
+  padding: 5px;
+}
+
+.product-item-description span {
+  display: inline-block;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.product-item-price {
+  padding: 5px;
+  font-size: 20px;
+  color: #565656;
+}
+
+.product-item-button-container {
+  text-align: center;
+  padding-bottom: 14px;
+}
+
+.product-item-buttons-container {
+  margin: 0 auto;
+  width: 136px;
+}
+
+.product-item-button {
+  width: 145px;
+  height: 32px;
+  border-radius: 23px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.25);
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: .4px;
+  color: #0071ce;
+  text-align: center;
+}
+
+.product-item-button-minus {
+  float: left;
+  width: 28px;
+  height: 32px;
+  border-radius: 23px 0 0 23px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.25);
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: .4px;
+  color: #0071ce;
+  text-align: center;
+}
+
+
+.product-item-button-plus {
+  float: left;
+  width: 28px;
+  height: 32px;
+  border-radius: 0 23px 23px 0;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.25);
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: .4px;
+  color: #0071ce;
+  text-align: center;
+}
+
+.product-item-quantity {
+  float: left;
+  width: 80px;
+  height: 32px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.25);
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 700;
+  letter-spacing: .4px;
+  color: #0071ce;
+  margin: 0;
+  text-align: center;
+}
